@@ -55,7 +55,7 @@ def extract_table_data(soup):
 
 # ✅ Streamlit app
 def main():
-    st.title("Batting Innings Stats (2000–2025, Test Matches)")
+    st.title("Batting Innings Stats (2000–2024, Test Matches)")
     st.write("Data scraped live from ESPNcricinfo Statsguru")
 
     try:
