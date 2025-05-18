@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: teststats
+    runtime: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "streamlit run cricket_stats.py --server.port $PORT --server.enableCORS false"
+    plan: free
