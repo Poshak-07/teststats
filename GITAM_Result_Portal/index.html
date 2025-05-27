@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GITAM Student Result Portal</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+    }
+    input[type="text"] {
+      width: 80%;
+      padding: 10px;
+      margin: 20px 10%;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      display: block;
+      margin: 0 auto;
+      padding: 10px 30px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .results {
+      display: none;
+      margin-top: 30px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+    th, td {
+      padding: 10px;
+      border: 1px solid #ccc;
+      text-align: left;
+    }
+    .grade-footer {
+      text-align: right;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Student Result Portal</h2>
+    <input type="text" id="regNo" placeholder="Enter Admission / Registration Number">
+    <button onclick="showResults()">Submit</button>
+
+    <div class="results" id="results">
+      <h3>Semester 3</h3>
+      <table>
+        <tr><th>No.</th><th>Subject</th><th>Grade</th></tr>
+        <tr><td>1</td><td>Verbal Ability and Quantitative Ability (Soft Skills 3)</td><td>A</td></tr>
+        <tr><td>2</td><td>Artificial Intelligence Applications</td><td>A</td></tr>
+        <tr><td>3</td><td>Computer Engineering Workshop</td><td>A</td></tr>
+        <tr><td>4</td><td>Digital Logic Circuit</td><td>B+</td></tr>
+        <tr><td>5</td><td>Data Communications</td><td>B+</td></tr>
+        <tr><td>6</td><td>Data Structures</td><td>B+</td></tr>
+        <tr><td>7</td><td>Environmental Studies</td><td>S</td></tr>
+        <tr><td>8</td><td>Linear Algebra</td><td>A</td></tr>
+        <tr><td>9</td><td>Number Theory</td><td>A</td></tr>
+        <tr><td>10</td><td>Additive Manufacturing</td><td>C</td></tr>
+        <tr><td>11</td><td>Understanding Indian Society</td><td>A</td></tr>
+      </table>
+      <div class="grade-footer">SGPA: 7.18 &nbsp;&nbsp; CGPA: 7.13</div>
+
+      <h3>Semester 4</h3>
+      <table>
+        <tr><th>No.</th><th>Subject</th><th>Grade</th></tr>
+        <tr><td>1</td><td>Practicing Verbal Ability and Quantitative Aptitude (Soft Skills 4)</td><td>A</td></tr>
+        <tr><td>2</td><td>Operating Systems</td><td>B</td></tr>
+        <tr><td>3</td><td>Object Oriented Programming with Java</td><td>B+</td></tr>
+        <tr><td>4</td><td>Computer Organization and Architecture</td><td>B+</td></tr>
+        <tr><td>5</td><td>Computer Networks</td><td>B+</td></tr>
+        <tr><td>6</td><td>Advanced Data Structures</td><td>C</td></tr>
+        <tr><td>7</td><td>Universal Human Values 2: Understanding Harmony</td><td>S</td></tr>
+        <tr><td>8</td><td>Probability and Statistics</td><td>B</td></tr>
+        <tr><td>9</td><td>Design Thinking</td><td>A</td></tr>
+        <tr><td>10</td><td>Principles of Quantum Mechanics</td><td>B+</td></tr>
+      </table>
+      <div class="grade-footer">SGPA: 7.3 &nbsp;&nbsp; CGPA: 7.4</div>
+    </div>
+  </div>
+
+  <script>
+    function showResults() {
+      const regNo = document.getElementById("regNo").value;
+      if (regNo.trim() === "") {
+        alert("Please enter your admission or registration number.");
+        return;
+      }
+      document.getElementById("results").style.display = "block";
+    }
+  </script>
+</body>
+</html>
